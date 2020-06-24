@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/JakDeabel/Cabron-s-BOT#readme",
   "dependencies": {
+    "color-diff": "^1.2.0",
     "discord.js": "^11.5.1",
     "fs": "0.0.1-security",
+    "jimp": "^0.13.0",
     "moment": "^2.27.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "twemoji": "^13.0.0"
   }
 }
