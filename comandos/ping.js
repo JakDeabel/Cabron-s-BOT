@@ -1,9 +1,9 @@
-exports.run = async (client, msg, args) => {
+exports.run = async (client, message, args) => {
     let parsed = client.utils.parseArgs(args, ['o']);
 
     if (parsed.options.o) {
-        return msg.edit(':stopwatch: Ping').then(m => {
-            let time = msg.editedTimestamp - msg.createdTimestamp;
+        return message.edit(':stopwatch: Ping').then(m => {
+            let time = message.editedTimestamp - message.createdTimestamp;
             client.utils.playAnimation(m, 500, [
                 ':stopwatch: __P__ing',
                 ':stopwatch: __Pi__ng',
@@ -14,11 +14,11 @@ exports.run = async (client, msg, args) => {
         });
     }
 
-    await msg.edit(':thinking: Ping');
+    await message.edit(':thinking: Ping');
 
-    const delay = msg.editedTimestamp - msg.createdTimestamp;
+    const delay = message.editedTimestamp - message.createdTimestamp;
 
-    (await msg.edit(`:stopwatch: Pong! \`${delay}ms\``)).delete(5000);
+    (await message.edit(`:stopwatch: Pong! \`${delay}ms\``)).delete(5000);
 };
 
 exports.info = {
