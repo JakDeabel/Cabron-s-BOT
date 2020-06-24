@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JakDeabel/Cabron-s-BOT#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
+    "fs": "0.0.1-security",
     "moment": "^2.27.0"
   }
 }
