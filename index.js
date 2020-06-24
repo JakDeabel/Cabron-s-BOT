@@ -52,7 +52,7 @@ client.on('guildMemberAdd', member => {
 }); 
 
 
- 280000);
+
 
 
 client.on('message', message => {
