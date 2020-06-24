@@ -21,7 +21,7 @@ emojiRgb = [
 
 exports.run = (client, message, args) => {
     if(args.length < 2){
-        message.channel.send(":warning: Need one argument. A custom emoji or image url.");
+        message.channel.send(":warning: Preciso de um argumento! Exemplo: escreve 2 vezes o emoji.");
         return;
     }
 
