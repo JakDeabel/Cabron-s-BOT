@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
         .setTitle("Infos comandos")
-        .setDescription("``help``, ``reload``, ``votacaotest``, ``coronapt``, ``coronabr``, ``clear``")
+        .setDescription("``help``, ``reload``, ``poll``, ``coronapt``, ``coronabr``, ``clear``")
         .setColor("#4a2496")
         .setFooter(`${client.user.username} | Prefixo: /`, client.user.avatarURL)
 		.setTimestamp();
