@@ -1,35 +1,11 @@
-exports.run = async (client, message, args) => {
-    let parsed = client.utils.parseArgs(args, ['o']);
+const { MessageEmbed } = require('discord.js');
 
-    if (parsed.options.o) {
-        return message.edit(':stopwatch: Ping').then(m => {
-            let time = message.editedTimestamp - message.createdTimestamp;
-            client.utils.playAnimation(m, 500, [
-                ':stopwatch: __P__ing',
-                ':stopwatch: __Pi__ng',
-                ':stopwatch: __Pin__g',
-                ':stopwatch: __Ping__',
-                `:stopwatch: ***Pong!*** \`${time}ms\``
-            ]);
-        });
-    }
+exports.run = (bot, message, args) => {
 
-    await message.edit(':thinking: Ping');
-
-    const delay = message.editedTimestamp - message.createdTimestamp;
-
-    (await message.edit(`:stopwatch: Pong! \`${delay}ms\``)).delete(5000);
-};
-
-exports.info = {
-    name: 'ping',
-    usage: 'ping [-o]',
-    description: 'Pings the bot',
-    options: [
-        {
-            name: '-o',
-            usage: '-o',
-            description: 'Shows the old ping message (animated)'
-        }
-    ]
-};
+const m = await message.channel.send(`Ping`);
+let embed = new MessageEmbed()
+.setDescription(`Pong!\n🚩 Latency ${Math.floor(m.createdTimestamp - message.createdTimestamp)}\n🌐 Client ${client.ws.ping}`)
+.setFooter('¯\_(ツ)_/¯')
+message.channel.send(embed)
+await m.delete();
+}
