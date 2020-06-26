@@ -1,17 +1,18 @@
-const { MessageEmbed } = require('discord.js');
-
 module.exports = {
-    name: 'ping',
-    aliases: ['p'],
-    description: 'Show ping latency',
-    cooldown: 5,
-    run: async (bot, message) => {
-
-        const m = await message.channel.send(`Ping`);
-        let embed = new MessageEmbed()
-        .setDescription(`Pong!\n🚩 Latency ${Math.floor(m.createdTimestamp - message.createdTimestamp)}\n🌐 Client ${bot.ws.ping}`)
-        .setFooter('¯\_(ツ)_/¯')
-        message.channel.send(embed)
-        await m.delete();
-    }
-}
+	name: 'ping',
+	description: 'Ping command.',
+	usage: '//ping',
+	args: false,
+	argsCount: 0,
+	guildOnly: false,
+	directOnly: false,
+	cooldown: 3,
+	disabled: false,
+	execute(client, message, args) {
+		const apiPing = client.ws.ping;
+		message.channel.send("Pinging...").then(m => {
+	    const botPing = m.createdTimestamp - message.createdTimestamp;
+	    m.edit(`Bot Latency: ${botPing}ms, API Latency: ${apiPing}ms.`);
+	  });
+	},
+};
