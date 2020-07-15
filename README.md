@@ -1,0 +1,1 @@
+<img src="https://img.shields.io/badge/Latest%20Version-v5.2.0-7289da?style=for-the-badge"> <a href="https://mirayxs.github.io/SplatNET"><img src="https://img.shields.io/badge/CabronsBOT-7289da?style=for-the-badge"></a>
