@@ -19,9 +19,5 @@
 
 <br>
 
-- Cabrons Live Covid-19 Stats
-  - Commands
-      - /coronapt
-        - Display the current status of covid-19 for Portugal
-      - /coronabr
-        - Display the current status of covid-19 for Brazil
+## Cabrons Live Covid-19 Stats
+  ## /coronapt & /coronabr
