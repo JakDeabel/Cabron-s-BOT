@@ -1,3 +1,10 @@
+<img width="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Cabrons" src="https://cdn.discordapp.com/icons/709454367484412075/56991584c57462b16f726681e634cedd.png">
+
+# Cabrons BOT
+>>>>>>>>>> ## A multi purpose Discord.js & Node.js bot
+
+
+
 <img src="https://img.shields.io/badge/Latest%20Version-v5.2.0-7289da?style=for-the-badge"> <a href="https://discord.gg/WWXqFpy"><img src="https://img.shields.io/badge/CabronsBOT-7289da?style=for-the-badge"></a>
 |  |  | 
 | - | - |
