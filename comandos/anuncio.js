@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client();
 
 exports.run = (client, message, args) => {  
-  if (message.author.id !== '340622268424126465' && message.author.id !== '318149637964038144' && message.author.id !== '380427905995636747' && !client.config.owners.includes(message.author.id)) return; 
+  if (message.author.id !== '340622268424126465' && message.author.id !== '318149637964038144' && message.author.id !== '380427905995636747' && !client.config.owner.includes(message.author.id)) return; 
   
   const filter = m => m.author.id === message.author.id
   
@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
   ac.on("collect", () => {
      
        let canala = message.guild.channels.find(`id`, "709473791440584794");
-       let embeda = new Discord.MessageEmbed()
+       let embeda = new Discord.RichEmbed()
          .setTitle(`${at.collected.first().content}`)
          .setDescription(`${ac.collected.first().content}`)
          .setColor('#4a2496')
