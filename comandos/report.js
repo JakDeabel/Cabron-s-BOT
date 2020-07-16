@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 	if (message.mentions.users.size < 1) return message.channel.send(`:x: \`|\` Mencione alguem para reportar`)
 	var razão = args.join(" ").slice(22);
 	if (razão.length < 1) return message.channel.send(":x: \`|\` Você não colocou uma razão para reportar esse usuario")
-  message.reply(`Utilizador <@${message.author.id}> reportado com sucesso`)
+  message.reply(`Utilizador ${usuario.user.username} reportado com sucesso!`)
 	let canal = bot.channels.get("710270600802730055")
 	const embed = new Discord.RichEmbed()
 		.setAuthor(`Usuario reportado: ${usuario.user.username}`, usuario.displayAvatarURL)
