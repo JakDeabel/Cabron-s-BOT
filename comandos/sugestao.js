@@ -19,7 +19,8 @@ exports.run = (bot, message, args) => {
         .setTimestamp()
     suggestchannel.send({
         embed
-    })/*.then(msg => {
+    }).then(message => {
+        message.react('👍').then(message.react('👎'))/*.then(msg => {
         msg.react('✅').then(r => msg.react('❎'))
     });*/
 
