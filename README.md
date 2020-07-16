@@ -5,7 +5,7 @@
 
 
 
-<img src="https://img.shields.io/badge/Latest%20Version-v5.2.0-7289da?style=for-the-badge"> <a href="https://discord.gg/WWXqFpy"><img src="https://img.shields.io/badge/CabronsBOT-7289da?style=for-the-badge"></a>
+<img src="https://img.shields.io/badge/Latest%20Version-v5.2.0-7289da?style=for-the-badge"> <a href="https://discord.gg/WWXqFpy"><img src="https://img.shields.io/badge/Owner:JAKDAX-7289da?style=for-the-badge"></a>
 |  |  | 
 | - | - |
 | Basic requirements| [![JavaScript](https://img.shields.io/badge/language-javascript-F7DF1E.svg?logo=JavaScript)](https://www.javascript.com) [![NodeJS](https://img.shields.io/badge/Node.js-12.13.0-339933.svg?logo=Node.js)](https://nodejs.org) [![DiscordJS](https://img.shields.io/badge/Discord.js-v12.2.0-7289DA.svg?logo=Discord)](https://discord.js.org) |
