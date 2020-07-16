@@ -8,7 +8,6 @@ exports.run = (client, message, args) => {
   
   const canal = client.channels.get("709968517981798504");
 
-  
   const sayMessage = args.join(" ");
       message.delete().catch();
       
@@ -19,8 +18,7 @@ exports.run = (client, message, args) => {
     .setFooter('© Cabrons - Parcerias')
   canal.send(embed);
 
-  message.channel.send("@everyone")
-  message.delete().catch();
+
      
 }
           
