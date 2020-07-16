@@ -140,3 +140,16 @@ exports.info = {
     guildOnly: true,    // maybe not? todo check later
 	help: "Print a big pixeled emoji made of small emojis :3"
 };
+
+
+
+
+
+
+
+
+// imagina agora faço qualquer coisa aqui no code, e o git vai praticamente detectar o que eu fiz e mandar para a rep onde todos tem acesso
+
+
+
+//vou salvar agora
