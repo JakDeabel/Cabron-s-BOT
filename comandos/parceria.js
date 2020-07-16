@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   const sayMessage = args.join(" ");
       message.delete().catch();
       
-  const embed = new Discord.RichEmbed()  
+  const embed = new Discord.Embed()  
     .setTitle('<:4015_my_verified_emoji:710118751936184361> Nova parceria oficial do Cabrons!')
     .setDescription(`${sayMessage}`)
     .setColor('#4a2496')
