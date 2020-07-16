@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
 				}, 1000 * 120)
 				message.guild.members.get(usuario.id).addRole("711267700025851935");
 				const aceito = new Discord.RichEmbed()
-					.setDescription(`Caso aceito! \`${message.author}\``)
+					.setDescription(`Caso aceito! \`${message.author.username}\``)
 					.setColor(0x36393e)
         msg.edit(aceito)
         msg.clearReactions()
