@@ -19,6 +19,7 @@
   "dependencies": {
     "color-diff": "^1.2.0",
     "discord.js": "^11.5.1",
+    "discord.js-minesweeper": "^1.0.5",
     "fs": "0.0.1-security",
     "jimp": "^0.13.0",
     "moment": "^2.27.0",
