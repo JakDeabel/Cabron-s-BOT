@@ -54,11 +54,3 @@ module.exports.run = async (bot, message, args) => {
 
 // De aceitar o user reportado é mutado por um X tempo, se recusar apenas é recusado, ai o bot edita a msg e fala "Caso aceito", "Caso negado"                                                         
 
-
-module.exports.command = {
-	name: 'reporte',
-  aliases: ['denuncia'],
-	description: 'Reporta algum utilizador',
-	category: "sistema",
-	usage: 'reporte <membro> <razão>',
-	enabled: true
