@@ -12,12 +12,16 @@ exports.run = (client, message, args) => {
   const sayMessage = args.join(" ");
       message.delete().catch();
       
-  const embed = new Discord.Embed()  
+  const embed = new Discord.RichEmbed()  
     .setTitle('<:4015_my_verified_emoji:710118751936184361> Nova parceria oficial do Cabrons!')
     .setDescription(`${sayMessage}`)
     .setColor('#4a2496')
     .setFooter('© Cabrons - Parcerias')
   canal.send(embed);
+
+  message.channel.send("@everyone")
+  message.delete().catch();
+     
 }
           
 module.exports.command = {
