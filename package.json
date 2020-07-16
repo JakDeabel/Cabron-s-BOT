@@ -22,8 +22,6 @@
     "fs": "0.0.1-security",
     "jimp": "^0.13.0",
     "moment": "^2.27.0",
-    "parse-ms": "^2.1.0",
-    "quick.db": "^6.3.2",
     "request": "^2.88.2",
     "twemoji": "^13.0.0"
   }
