@@ -16,6 +16,7 @@ exports.run = (bot, message, args) => {
     let embed = new Discord.RichEmbed()
         .addField("**Sugestão Recebida**", `${suggestmessage}`)
         .setFooter(`Sugestão de ${message.author.tag}`)
+        .setColor('#4a2496')
         .setTimestamp()
     suggestchannel.send({
         embed
