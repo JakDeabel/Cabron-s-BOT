@@ -22,6 +22,8 @@
     "discord.js-minesweeper": "^1.0.5",
     "fs": "0.0.1-security",
     "jimp": "^0.13.0",
+    "mathjs": "^7.1.0",
+    "megadb": "^3.4.0",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "request": "^2.88.2",
