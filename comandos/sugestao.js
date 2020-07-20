@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 //👨 Masculino 👩 Feminino 🌈 LGBT
-exports.run = (bot, message, args) => {
+exports.run = (client, message, args) => {
   //if(!message.member.roles.some(r => r.name === "👨 Masculino") || !message.member.roles.some(r => r.name === "👩 Feminino") || !message.member.roles.some(r => r.name === "🌈 LGBT")) {
     let suggestmessage = args.join(" ")//.slice(22);
     let suggestchannel = client.channels.get("709473997368328192");
