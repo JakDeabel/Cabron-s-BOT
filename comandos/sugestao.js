@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 exports.run = (bot, message, args) => {
   //if(!message.member.roles.some(r => r.name === "👨 Masculino") || !message.member.roles.some(r => r.name === "👩 Feminino") || !message.member.roles.some(r => r.name === "🌈 LGBT")) {
     let suggestmessage = args.join(" ")//.slice(22);
-    let suggestchannel = message.guild.channels.find(`name`, "『📖』sugestoes");
+    let suggestchannel = client.channels.get("709473997368328192");
 
     if (!suggestchannel) {
         return message.reply("<a:702223671066099812:711253483067801631> **|** Não detetei o canal de sugestões!")
