@@ -8,7 +8,7 @@ const client = new Discord.Client({
     fetchAllMembers: true,
     disabledEvents: ['typingStart', 'typingStop', 'guildMemberSpeaking'],
     messageCacheLifetime: 1680,
-    disableEveryone: true,
+    disableEveryone: false,
     messageSweepInterval: 1680
 });
 const config = require("./config.json")
