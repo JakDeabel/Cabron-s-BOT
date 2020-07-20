@@ -40,7 +40,7 @@ client.on('guildMemberAdd', member => {
   let embed = new Discord.RichEmbed()
     .setColor("#4d0cb5")
     .setAuthor(member.user.username, member.user.displayAvatarURL)
-    .setDescription(`**Seja bem vindo(a) <a:711191987524730891:711263483144044627> **\n\n <a:711037344798474260:711251952536780802> **ID do Usuário:** ${member.user.id}\n\n📅 **Conta criada em:** ${moment(member.user.createdAt).format('LLLL')}\n\n <:706054581230108763:711261162527785070> **Membro Número:** __${member.guild.memberCount}__` + `º` + `\n\n *<#711052318828789831>* *<#709472290450047006>* *<#709464688282566668>*`)
+    .setDescription(`**Seja bem vindo(a) <a:711191987524730891:711263483144044627> **\n\n <a:711037344798474260:711251952536780802> **ID do Usuário:** ${member.user.id}\n\n📅 **Conta criada em:** ${moment(member.user.createdAt).format('LLLL')}\n\n <:706054581230108763:711261162527785070> **Membro Número:** __${member.guild.memberCount}__` + `º` + `\n\n *<#711052318828789831>* *<#709472290450047006>*`)
     .setThumbnail(member.user.displayAvatarURL)
     .setFooter(" Cabrons Community - Direitos Reservados°")
      
