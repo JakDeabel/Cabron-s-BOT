@@ -7,10 +7,8 @@ module.exports.run = (bot, message, args) => {
 
     let embed = new Discord.RichEmbed()
         .setColor("#4a2496")
-        .addField("**NOVA SUGESTÃO**", `${sugestao}`)
-        .addField("**SUGESTÃO ENVIADO POR:**", `${message.author}`)
-        .addField("**SIM** -  👍", "Para votar em **SIM**, basta reagir abaixo.")
-        .addField("**NÃO** - 👎", "Para votar em **NÃO**, basta reagir abaixo.")
+        .addField("**Sugestão enviada por:**", `${message.author}`)
+        .addField("**Sugestão:**", `${sugestao}`)
         .setTimestamp(new Date())
 
     let canal = message.guild.channels.find(canal => canal.id === "709473997368328192"); //coloque o id do canal de sugestões.
