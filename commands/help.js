@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
         .setTitle("Infos comandos")
-        .setDescription("``ajuda``, ``reload``, ``poll``, ``apagar``, ``uptime``, ``coronapt``, ``coronabr``, ``sugestao``, ``parceria``")
+        .setDescription("``ajuda``, ``reload``, ``poll``, ``apagar``, ``uptime``, ``coronapt``, ``coronabr``, ``parceria``, ``ping``, ``say``, ``sugestao``")
         .setColor("#4a2496")
         .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
 		.setTimestamp();
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
         .setTitle("Comandos de entretenimento")
-        .setDescription("``emoji``, ``campominado``, ``roleta``, ``slots``") 
+        .setDescription("``emoji``, ``campominado``, ``roleta``, ``slots``,``ship``") 
         .setColor("#4a2496")
         .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
 		.setTimestamp();
