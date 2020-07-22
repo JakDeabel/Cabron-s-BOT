@@ -1,33 +1,33 @@
 {
-  "name": "cabron-s-bot",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "discord.js": "^11.5.0",
+    "fs": "^0.0.2",
+    "quick.db": "^7.1.1",
+    "parse-ms": "^2.0.0",
+    "moment": "^2.27.0",
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JakDeabel/Cabron-s-BOT.git"
+    "url": "https://glitch.com/edit/#!/hello-express"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JakDeabel/Cabron-s-BOT/issues"
-  },
-  "homepage": "https://github.com/JakDeabel/Cabron-s-BOT#readme",
-  "dependencies": {
-    "color-diff": "^1.2.0",
-    "discord.js": "^11.5.1",
-    "discord.js-minesweeper": "^1.0.5",
-    "fs": "0.0.1-security",
-    "jimp": "^0.13.0",
-    "mathjs": "^7.1.0",
-    "megadb": "^3.4.0",
-    "moment": "^2.27.0",
-    "moment-duration-format": "^2.3.2",
-    "request": "^2.88.2",
-    "twemoji": "^13.0.0",
-    "weather-js": "^2.0.0"
-  }
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
