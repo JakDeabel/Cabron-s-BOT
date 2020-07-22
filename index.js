@@ -42,9 +42,12 @@ fs.readdir("./commands/", (err, files) => {
 });
 })
 
- bot.on('message', message => {
-    if(message.author.bot) return; //não responde bot
-    if(message.channel.type == "dm") return; //não reponde dm
+
+
+  bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+    
     let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
     if(!prefixes[message.guild.id]){
         prefixes[message.guild.id] = {
@@ -62,11 +65,6 @@ fs.readdir("./commands/", (err, files) => {
     let arquivocmd = bot.commands.get(command.slice(prefix.length));
     if(arquivocmd) arquivocmd.run(bot,message,args);
 });
-
-  bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-    let prefix = botconfig.prefix
     let messageArray = message.content.split(" ");
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
