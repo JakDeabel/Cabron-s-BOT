@@ -5,10 +5,10 @@ module.exports.run = async (bot, message, args) => {
 
     let menuEmbed = new Discord.RichEmbed()
 	
-	.setTitle("Help Menu")
+	.setTitle(":man_raising_hand: Olá, Aqui estão os meus comandos!")
 	.setColor('#4a2496')
 	.setDescription("Escolha uma categoria")
-	.addField("Reações", 'Infos = 🗒  \n Entretenimento = 🎮 \n Economia = 💰')
+	.addField("Reações", '**Comandos de Utilidade** = 🗒  \n **Comandos de Entretenimento** = 🎮 \n **Comandos de Economia** = 💰')
 	.setFooter(`Comando solicitado por: ${message.author.username}`, message.author.avatarURL)
 	.setTimestamp();
 	
@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
         var embed1 = new Discord.RichEmbed()
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
-        .setTitle("Infos comandos")
+        .setTitle("Comandos de Utilidade 🗒")
         .setDescription("``ajuda``, ``reload``, ``poll``, ``apagar``, ``uptime``, ``coronapt``, ``coronabr``, ``parceria``, ``ping``, ``say``, ``sugestao``")
         .setColor("#4a2496")
         .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 		var embed3 = new Discord.RichEmbed()
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
-        .setTitle("Comandos de entretenimento")
+        .setTitle("Comandos de Entretenimento 🎮")
         .setDescription("``emoji``, ``campominado``, ``roleta``, ``slots``,``ship``") 
         .setColor("#4a2496")
         .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
   var embed4 = new Discord.RichEmbed()
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
-        .setTitle("Comandos de economia")
+        .setTitle("Comandos de Economia 💰")
         .setDescription("``daily``, ``rubies``, ``work``, ``perfil``, ``loja``, ``comprar``, ``depositar``, ``retirar``") 
         .setColor("#4a2496")
         .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
