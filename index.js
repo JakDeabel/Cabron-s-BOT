@@ -9,7 +9,7 @@ bot.aliases = new Discord.Collection();
 
 bot.on("ready", () => {
 
-    var jogando = `/help | ${bot.users.size} Cabrons!`
+    var jogando = `Em Manutenção | ${bot.users.size} Cabrons!`
     console.log("Conectado!!")
     console.log(`Servidores(${bot.guilds.size}):\n${bot.guilds.map(servidor => servidor.name).join(", ")}`)
     
