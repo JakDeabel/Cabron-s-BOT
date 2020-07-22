@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("Comandos de economia")
         .setDescription("``daily``, ``rubies``, ``work``, ``perfil``, ``loja``, ``comprar``, ``depositar``, ``retirar``") 
         .setColor("#4a2496")
-        .setFooter(`${bot.user.username} | Prefixo: /`, bot.user.avatarURL)
+        .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
 		.setTimestamp();
 		
 	
@@ -73,6 +73,6 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "helpantigo",
-  aliases: ["helpu"]
+  name: "ajuda",
+  aliases: ["help"]
 };
