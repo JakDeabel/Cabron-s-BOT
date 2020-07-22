@@ -7,6 +7,17 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
+bot.on("ready", () => {
+
+    var jogando = `/help | ${client.users.size} Cabrons!`
+    console.log("Conectado!!")
+    console.log(`Servidores(${client.guilds.size}):\n${client.guilds.map(servidor => servidor.name).join(", ")}`)
+    
+    client.user.setGame(jogando);
+   
+
+})
+
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -28,10 +39,8 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 })
-bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`Em Manutenção!`);
-  bot.user.setStatus('online');
+
+
 
   bot.on("message", async message => {
     if(message.author.bot) return;
@@ -56,7 +65,7 @@ bot.on("ready", async () => {
   
   } catch (e) {
   }}
-  )})
+  )
 
 
 bot.login(process.env.token)
