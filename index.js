@@ -9,11 +9,11 @@ bot.aliases = new Discord.Collection();
 
 bot.on("ready", () => {
 
-    var jogando = `/help | ${client.users.size} Cabrons!`
+    var jogando = `/help | ${bot.users.size} Cabrons!`
     console.log("Conectado!!")
-    console.log(`Servidores(${client.guilds.size}):\n${client.guilds.map(servidor => servidor.name).join(", ")}`)
+    console.log(`Servidores(${bot.guilds.size}):\n${bot.guilds.map(servidor => servidor.name).join(", ")}`)
     
-    client.user.setGame(jogando);
+    bot.user.setGame(jogando);
    
 
 })
