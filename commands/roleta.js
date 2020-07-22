@@ -28,7 +28,7 @@ let moneymore = new Discord.RichEmbed()
 
 let colorbad = new Discord.RichEmbed()
 .setColor("#4a2496")
-.setDescription(`<a:702223671066099812:711253483067801631>| Indica uma cor para apostar | Vermelho [1.5x] Preto [2x] Verde [15x]`);
+.setDescription(`<a:702223671066099812:711253483067801631>| Indica uma cor para apostar | **Vermelho** [1.5x] **Preto** [2x] **Verde** [15x]`);
 
 
     if (!colour)  return message.channel.send(colorbad);
@@ -48,7 +48,7 @@ let colorbad = new Discord.RichEmbed()
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed1 = new Discord.RichEmbed()
         .setColor("#4a2496")
-        .setDescription(`:green_square: | Ganhaste **${money}** <:5648_ruby_logo:734250477822279732> Rubies\n\nMultiplier: 15x`);
+        .setDescription(`:green_square: | Ganhaste **${money}** <:image:735338033183981628> Rubies\n\nMultiplier: 15x`);
         message.channel.send(moneyEmbed1)
         console.log(`${message.author.tag} Won ${money} on green`)
     } else if (isOdd(random) && colour == 1) { // Red
@@ -56,20 +56,20 @@ let colorbad = new Discord.RichEmbed()
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed2 = new Discord.RichEmbed()
         .setColor("#4a2496")
-        .setDescription(`:small_red_triangle:| Ganhaste **${money}** <:5648_ruby_logo:734250477822279732> Rubies\n\nMultiplier: 1.5x`);
+        .setDescription(`:small_red_triangle:| Ganhaste **${money}** <:image:735338033183981628> Rubies\n\nMultiplier: 1.5x`);
         message.channel.send(moneyEmbed2)
     } else if (!isOdd(random) && colour == 0) { // Black
         money = parseInt(money * 2)
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed3 = new Discord.RichEmbed()
         .setColor("#4a2496")
-        .setDescription(`:black_medium_small_square: | Ganhaste **${money}** <:5648_ruby_logo:734250477822279732> Rubies\n\nMultiplier: 2x`);
+        .setDescription(`:black_medium_small_square: | Ganhaste **${money}** <:image:735338033183981628> Rubies\n\nMultiplier: 2x`);
         message.channel.send(moneyEmbed3)
     } else { // Wrong
         db.subtract(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed4 = new Discord.RichEmbed()
         .setColor("#4a2496")
-        .setDescription(`<a:702223671066099812:711253483067801631>| Perdeste **${money}** <:5648_ruby_logo:734250477822279732> Rubies\n\nMultiplier: 0x`);
+        .setDescription(`<a:702223671066099812:711253483067801631>| Perdeste **${money}** <:image:735338033183981628> Rubies\n\nMultiplier: 0x`);
         message.channel.send(moneyEmbed4)
     }
 }

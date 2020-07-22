@@ -39,7 +39,7 @@ if (vip === null) random = Math.floor(Math.random() * 100) + 1;
         let amount = Math.floor(Math.random() * 80) + 1;
         let embed1 = new Discord.RichEmbed()
         .setColor("#4a2496")
-        .setDescription(`<a:6181_check:734253564746137620>| Trabalhaste como ${replies[result]} e recebeste **${amount}** <:5648_ruby_logo:734250477822279732> Rubies`);
+        .setDescription(`<a:6181_check:734253564746137620>| Trabalhaste como ${replies[result]} e recebeste **${amount}** <:image:735338033183981628> Rubies`);
         message.channel.send(embed1)
       
           

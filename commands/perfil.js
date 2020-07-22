@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
   let moneyEmbed = new Discord.RichEmbed()
   .setColor("#4a2496")
   .setThumbnail(`${member.user.displayAvatarURL}`)
-  .setDescription(`**${user} Perfil**\n\n:black_medium_small_square: Carteira: **${money}**\n:bank: Banco: **${bank}**\nRank Vip: :orange_book: **${vip}**\n\n**Inventário**\n\n:ring: Jóias: **${shoes}**\n:red_car: Carros: **${newcar}**\n:woman_singer: Putas: **${newhouse}**`);
+  .setDescription(`**${user} Perfil**\n\n:black_medium_small_square: Carteira: **${money}** <:image:735338033183981628>\n:bank: Banco: **${bank}** <:image:735338033183981628>\nRank Vip: :orange_book: **${vip}**\n\n**Inventário**\n\n:ring: Jóias: **${shoes}**\n:red_car: Carros: **${newcar}**\n:woman_singer: Putas: **${newhouse}**`);
   message.channel.send(moneyEmbed)
 };
 
