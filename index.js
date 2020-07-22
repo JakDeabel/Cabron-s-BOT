@@ -2,12 +2,31 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
+const moment = require("moment")
+moment.locale('pt-BR');
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
 
+bot.on('guildMemberAdd', member => {
+  
+  if (member.guild.id !== '709454367484412075') return;
+  
+  let embed = new Discord.RichEmbed()
+    .setColor("#4d0cb5")
+    .setAuthor(member.user.username, member.user.displayAvatarURL)
+    .setDescription(`**Seja bem vindo(a) <a:711191987524730891:711263483144044627> **\n\n <a:711037344798474260:711251952536780802> **ID do Usuário:** ${member.user.id}\n\n📅 **Conta criada em:** ${moment(member.user.createdAt).format('LLLL')}\n\n <:706054581230108763:711261162527785070> **Membro Número:** __${member.guild.memberCount}__` + `º` + `\n\n *<#711052318828789831>* *<#709472290450047006>*`)
+    .setThumbnail(member.user.displayAvatarURL)
+    .setFooter(" Cabrons Community - Direitos Reservados°")
+     
+  let wec = bot.channels.get('733384176270704690')
+    
+    wec.send(`<@${member.id}>`).then(message => setTimeout(() => message.delete(), 300000))
+    wec.send(embed).then(message => setTimeout(() => message.delete(), 300000))
+  
+}); 
 
 
 
