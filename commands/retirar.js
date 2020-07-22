@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     db.add(`money_${message.guild.id}_${user.id}`, money)
     let embed5 = new Discord.RichEmbed()
   .setColor("#4a2496")
-  .setDescription(`<a:6181_check:734253564746137620>| Você retirou **${money}** <:5648_ruby_logo:734250477822279732> Rubies do banco.`);
+  .setDescription(`<a:6181_check:734253564746137620>| Você retirou **${money}** <:image:735338033183981628> Rubies do banco.`);
   message.channel.send(embed5)
   
   } else {
@@ -48,7 +48,7 @@ module.exports.run = async (bot, message, args) => {
 
   let embed5 = new Discord.RichEmbed()
   .setColor("#4a2496")
-  .setDescription(`<a:6181_check:734253564746137620>| Você retirou **${args[0]}** <:5648_ruby_logo:734250477822279732> Rubies do banco.`);
+  .setDescription(`<a:6181_check:734253564746137620>| Você retirou **${args[0]}** <:image:735338033183981628> Rubies do banco.`);
 
   message.channel.send(embed5)
   db.subtract(`bank_${message.guild.id}_${user.id}`, args[0])

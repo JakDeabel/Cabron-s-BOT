@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args, utils) => {
 
   let moneyEmbed = new Discord.RichEmbed()
   .setColor("#4a2496")
-  .setDescription(`**${user}' <:5648_ruby_logo:734250477822279732>| Rubies**\n\n:black_large_square: Carteira: ${bal}\n:bank: Banco: ${bank}`);
+  .setDescription(`**${user}' <:image:735338033183981628>| Rubies**\n\n:black_large_square: Carteira: ${bal}\n:bank: Banco: ${bank}`);
   message.channel.send(moneyEmbed)
 };
 

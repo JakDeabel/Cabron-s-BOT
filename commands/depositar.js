@@ -27,8 +27,7 @@ module.exports.run = async (bot, message, args) => {
     let embed5 = new Discord.RichEmbed()
       .setColor("#4a2496")
       .setDescription(
-        `<a:6181_check:734253564746137620>| Você depositou **${money}** <:5648_ruby_logo:734250477822279732> Rubies no banco.`
-      );
+        `<a:6181_check:734253564746137620>| Você depositou **${money}** <:image:735338033183981628> Rubies no banco.`)
     message.channel.send(embed5);
   } else {
     if (isNaN(args[0]))
@@ -70,7 +69,7 @@ module.exports.run = async (bot, message, args) => {
       .setDescription(
         `<a:6181_check:734253564746137620>| Você depositou **${
           args[0]
-        }** <:5648_ruby_logo:734250477822279732> Rubies no banco.`
+        }** <:image:735338033183981628> Rubies no banco.`
       );
 
     message.channel.send(embed5);

@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
   let Embed = new Discord.RichEmbed()
     .setColor("#4a2496")
     .setDescription(
-      `<a:702223671066099812:711253483067801631>| Precisas de **3500** <:5648_ruby_logo:734250477822279732> Rubies para comprares o :orange_book: **VIP Senpai**.`
+      `<a:702223671066099812:711253483067801631>| Precisas de **3500** <:image:735338033183981628> Rubies para comprares o :orange_book: **VIP Senpai**.`
     );
 
   if (args[0] == "senpai") {
@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     let Embed2 = new Discord.RichEmbed()
       .setColor("#4a2496")
       .setDescription(
-        `<a:6181_check:734253564746137620>| Compraste o :orange_book: **VIP Senpai** por **3500** <:5648_ruby_logo:734250477822279732> Rubies.`
+        `<a:6181_check:734253564746137620>| Compraste o :orange_book: **VIP Senpai** por **3500** <:image:735338033183981628> Rubies.`
       );
 
     db.subtract(`money_${message.guild.id}_${user.id}`, 3500);
@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
     let Embed2 = new Discord.RichEmbed()
       .setColor("#4a2496")
       .setDescription(
-        `<a:702223671066099812:711253483067801631>| Precisas de **600** <:5648_ruby_logo:734250477822279732> Rubies para comprar uma :ring: **Jóia**.`
+        `<a:702223671066099812:711253483067801631>| Precisas de **600** <:image:735338033183981628> Rubies para comprar uma :ring: **Jóia**.`
       );
 
     if (author < 600) return message.channel.send(Embed2);
@@ -43,7 +43,7 @@ module.exports.run = async (bot, message, args) => {
     let Embed3 = new Discord.RichEmbed()
       .setColor("#4a2496")
       .setDescription(
-        `<a:6181_check:734253564746137620>| Compraste uma :ring: **Jóia** por **600** <:5648_ruby_logo:734250477822279732> Rubies.`
+        `<a:6181_check:734253564746137620>| Compraste uma :ring: **Jóia** por **600** <:image:735338033183981628> Rubies.`
       );
 
     db.subtract(`money_${message.guild.id}_${user.id}`, 600);
@@ -52,7 +52,7 @@ module.exports.run = async (bot, message, args) => {
     let Embed2 = new Discord.RichEmbed()
       .setColor("#4a2496")
       .setDescription(
-        `<a:702223671066099812:711253483067801631>| Precisas de **800** <:5648_ruby_logo:734250477822279732> Rubies para comprar um :red_car: **Carro**.`
+        `<a:702223671066099812:711253483067801631>| Precisas de **800** <:image:735338033183981628> Rubies para comprar um :red_car: **Carro**.`
       );
 
     if (author < 800) return message.channel.send(Embed2);
@@ -62,7 +62,7 @@ module.exports.run = async (bot, message, args) => {
 
     let Embed3 = new Discord.RichEmbed()
       .setColor("#4a2496")
-      .setDescription(`<a:6181_check:734253564746137620>| Compraste um :red_car: **Carro** por **800**  <:5648_ruby_logo:734250477822279732> Rubies.`);
+      .setDescription(`<a:6181_check:734253564746137620>| Compraste um :red_car: **Carro** por **800** <:image:735338033183981628> Rubies.`);
 
     db.subtract(`money_${message.guild.id}_${user.id}`, 800);
     message.channel.send(Embed3);
@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
     let Embed2 = new Discord.RichEmbed()
       .setColor("#4a2496")
       .setDescription(
-        `<a:702223671066099812:711253483067801631>| Precisas de **1200** <:5648_ruby_logo:734250477822279732> Rubies para comprar uma :woman_singer: **Puta**.`
+        `<a:702223671066099812:711253483067801631>| Precisas de **1200** <:image:735338033183981628> Rubies para comprar uma :woman_singer: **Puta**.`
       );
 
     if (author < 1200) return message.channel.send(Embed2);
@@ -80,7 +80,7 @@ module.exports.run = async (bot, message, args) => {
 
     let Embed3 = new Discord.RichEmbed()
       .setColor("#4a2496")
-      .setDescription(`<a:6181_check:734253564746137620>| Compraste uma :woman_singer: **Puta** por **1200** <:5648_ruby_logo:734250477822279732> Rubies.`);
+      .setDescription(`<a:6181_check:734253564746137620>| Compraste uma :woman_singer: **Puta** por **1200** <:image:735338033183981628> Rubies.`);
 
     db.subtract(`money_${message.guild.id}_${user.id}`, 1200);
     message.channel.send(Embed3);
