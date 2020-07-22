@@ -6,10 +6,10 @@ module.exports.run = (bot, message, args) => {
     if (!sugestao) return message.reply("insira sua sugestão.")
 
     let embed = new Discord.RichEmbed()
-        .setColor("#4a2496")
-        .addField("**Sugestão enviada por:**", `${message.author}`)
-        .addField("**Sugestão:**", `${sugestao}`)
-        .setTimestamp(new Date())
+        .addField("**Sugestão Recebida**", `${sugestao}`)
+        .setFooter(`Sugestão de ${message.author.tag}`)
+        .setColor('#4a2496')
+        .setTimestamp()
 
     let canal = message.guild.channels.find(canal => canal.id === "709473997368328192"); //coloque o id do canal de sugestões.
     if (!canal) return message.reply("❌ | Não existe nenhum canal para enviar a sua sugestão.");
