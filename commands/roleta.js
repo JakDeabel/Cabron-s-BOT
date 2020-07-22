@@ -20,7 +20,7 @@ let random = Math.floor(Math.random() * 37);
 
 let moneyhelp = new Discord.RichEmbed()
 .setColor("#4a2496")
-.setDescription(`<a:702223671066099812:711253483067801631>| Indica uma quantia para apostar | c!rouleta <cor> <quantia>`);
+.setDescription(`<a:702223671066099812:711253483067801631>| Indica uma quantia para apostar | c!roleta <cor> <quantia>`);
 
 let moneymore = new Discord.RichEmbed()
 .setColor("#4a2496")
