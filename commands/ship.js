@@ -51,6 +51,7 @@ module.exports.run = async (bot, message, args) => {
     message.reply(new Discord.RichEmbed()
         .setTitle(`${shipOne.user.username} ❤ ${shipSec.user.username}`)
         .setDescription(Text[rnd].txt)
+        .setColor("#4a2496")
         .attachFiles(['ship.png'])
         .setImage('attachment://ship.png')
     ).then(S => {
