@@ -33,13 +33,13 @@ module.exports.run = async (bot, message, args) => {
     }
     if (win) {
         let slotsEmbed1 = new Discord.RichEmbed()
-            .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n\nGanhaste **${money}** <:5648_ruby_logo:734250477822279732> Rubies`)
+            .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n\nGanhaste **${money}** <:image:735338033183981628> Rubies`)
             .setColor("#4a2496")
         message.channel.send(slotsEmbed1)
         db.add(`money_${message.guild.id}_${user.id}`, money)
     } else {
         let slotsEmbed = new Discord.RichEmbed()
-            .setDescription(`${slotItems[number[0]]} | ${slotItems[number[1]]} | ${slotItems[number[2]]}\n\nPerdeste ** ${money}** <:5648_ruby_logo:734250477822279732> Rubies`)
+            .setDescription(`${slotItems[number[0]]} | ${slotItems[number[1]]} | ${slotItems[number[2]]}\n\nPerdeste ** ${money}** <:image:735338033183981628> Rubies`)
             .setColor("#4a2496")
         message.channel.send(slotsEmbed)
         db.subtract(`money_${message.guild.id}_${user.id}`, money)
