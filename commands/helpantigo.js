@@ -17,9 +17,9 @@ module.exports.run = async (bot, message, args) => {
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
         .setTitle("Infos comandos")
-        .setDescription("``help``, ``reload``, ``poll``, ``clear``, ``uptime``")
+        .setDescription("``ajuda``, ``reload``, ``poll``, ``apagar``, ``uptime``, ``coronapt``, ``coronabr``, ``sugestao``, ``parceria``")
         .setColor("#4a2496")
-        .setFooter(`${bot.user.username} | Prefixo: /`, bot.user.avatarURL)
+        .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
 		.setTimestamp();
 		
 		
@@ -27,16 +27,16 @@ module.exports.run = async (bot, message, args) => {
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
         .setTitle("Comandos de entretenimento")
-        .setDescription("Em desenvolvimento, jakDAX") 
+        .setDescription("``emoji``, ``campominado``, ``roleta``, ``slots``") 
         .setColor("#4a2496")
-        .setFooter(`${bot.user.username} | Prefixo: /`, bot.user.avatarURL)
+        .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
 		.setTimestamp();
   
   var embed4 = new Discord.RichEmbed()
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
         .setTitle("Comandos de economia")
-        .setDescription("Em desenvolvimento, jakDAX") 
+        .setDescription("``daily``, ``rubies``, ``work``, ``perfil``, ``loja``, ``comprar``, ``depositar``, ``retirar``") 
         .setColor("#4a2496")
         .setFooter(`${bot.user.username} | Prefixo: /`, bot.user.avatarURL)
 		.setTimestamp();
