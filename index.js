@@ -19,6 +19,8 @@ bot.on("ready", () => {
 })
 
 
+
+
 fs.readdir("./commands/", (err, files) => {
 
   if(err) console.log(err);
@@ -40,7 +42,26 @@ fs.readdir("./commands/", (err, files) => {
 });
 })
 
-
+ bot.on('message', message => {
+    if(message.author.bot) return; //não responde bot
+    if(message.channel.type == "dm") return; //não reponde dm
+    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+    if(!prefixes[message.guild.id]){
+        prefixes[message.guild.id] = {
+            prefixes: botconfig.prefix
+        };
+    }
+ 
+    let prefix = prefixes[message.guild.id].prefixes;
+ 
+    if(!message.content.startsWith(prefix)) return; //responde só ao seu prefixo
+    let messageArray = message.content.split(" ");
+    let command = messageArray[0];
+    let args = messageArray.slice(1);
+ 
+    let arquivocmd = bot.commands.get(command.slice(prefix.length));
+    if(arquivocmd) arquivocmd.run(bot,message,args);
+});
 
   bot.on("message", async message => {
     if(message.author.bot) return;
@@ -50,6 +71,8 @@ fs.readdir("./commands/", (err, files) => {
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
     let commandfile;
+    
+   
 
     if (bot.commands.has(cmd)) {
       commandfile = bot.commands.get(cmd);
