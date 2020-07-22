@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
 
     let embed = new Discord.RichEmbed()
-    .setDescription("**Rank VIP**\n\n:orange_book:| Bronze: **3500** Rubies [``c!comprar bronze``]\n\n**Items Extravagantes**\n\n:ring:| Joias: **600** Rubies [``c!comprar joia``]\n:red_car:| Carros: **800** Rubies[``c!comprar carro``]\n:woman_singer:| Putas: **1200** Rubies[``c!comprar puta``]")
+    .setDescription("**Rank VIP**\n\n:orange_book:| Senpai: **100.000** Rubies [``c!comprar bronze``]\n\n**Items Extravagantes**\n\n:ring:| Joias: **6.000** Rubies [``c!comprar joia``]\n:red_car:| Carros: **12.000** Rubies[``c!comprar carro``]\n:woman_singer:| Putas: **7.500** Rubies[``c!comprar puta``]")
     .setColor("#4a2496")
     message.channel.send(embed)
 
