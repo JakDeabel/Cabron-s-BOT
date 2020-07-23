@@ -4,8 +4,9 @@ const fetch = require("node-fetch")
 
 module.exports.run = async (bot, message, args, utils) => {
   
-   const avatar = await fetch(message.author.avatarURL({format: 'jpg'}))
-    
+  const member = message.mentions.members.first() || message.guild.member(args[0]) || message.member;
+  
+   const avatar = await fetch(member.user.displayAvatarURL ({format: 'jpg'}))
     
     
 let mage = new Canvas(500, 250)
