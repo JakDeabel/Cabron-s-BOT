@@ -13,7 +13,7 @@ bot.aliases = new Discord.Collection();
 
 bot.on("message", async message => {
   if(message.content === "c!profile") {
-  const avatar = await fetch(message.author.avatarURL({format: 'jpg'}))
+  
     
     
     
@@ -32,7 +32,6 @@ let mage = new Canvas(500, 250)
 .addText(`GUILD NAME - ${message.guild.name}`, 30, 200)
 .setColor("#ffffff")
 .addCircle(60, 40, 33)
-.addCircularImage(await avatar.buffer(), 60, 40, 30)
 .toBuffer();
     
     message.channel.send({files: [mage]}) //lol i forget again
