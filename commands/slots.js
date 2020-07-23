@@ -39,14 +39,13 @@ module.exports.run = async (bot, message, args) => {
         win = true;
     }
   
-  if (author !== null && timeout - (Date.now() - author) > 0) {
-        let time = ms(timeout - (Date.now() - author));
+  if (moneydb !== null && timeout - (Date.now() - moneydb) > 0) {
+        let time = ms(timeout - (Date.now() - moneydb));
     
         let timeEmbed = new Discord.RichEmbed()
         .setColor("#4a2496")
         .setDescription(`<a:702223671066099812:711253483067801631> Podes voltar a apostar em ${time.minutes}m ${time.seconds}s `);
         message.channel.send(timeEmbed)
-      } else {
         
     if (win) {
         let slotsEmbed1 = new Discord.RichEmbed()
