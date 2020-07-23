@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const ms = require("parse-ms");
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.content.startsWith('c'))return;  
+    if(!message.content.startsWith('c!'))return;  
   
   const member = message.mentions.members.first() || message.guild.member(args[0]) || message.member;
 
@@ -13,9 +13,9 @@ module.exports.run = async (bot, message, args) => {
     let money = parseInt(args[0]);
     let win = false;
   
-  let author = await db.fetch(`money_${message.guild.id}_${user.id}`)
+  let author = await db.fetch(`work_{message.guild.id}_${user.id}`)
   
-  let timeout = 6000;
+  let timeout = 30000;
 
     let moneymore = new Discord.RichEmbed()
     .setColor("#4a2496")
@@ -50,7 +50,7 @@ module.exports.run = async (bot, message, args) => {
         
     if (win) {
         let slotsEmbed1 = new Discord.RichEmbed()
-            .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n{nGanhaste **${money}** <:image:735338033183981628> Rubies`)
+            .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n\nGanhaste **${money}** <:image:735338033183981628> Rubies`)
             .setColor("#4a2496")
             .setThumbnail(`${member.user.displayAvatarURL}`)
         message.channel.send(slotsEmbed1)
