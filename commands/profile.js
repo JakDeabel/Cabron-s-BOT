@@ -2,11 +2,11 @@ const Discord = require("discord.js");
 const { Canvas } = require("canvas-constructor")
 const fetch = require("node-fetch")
 
-module.exports.run = async (bot, message, args, utils) => {
+module.exports.run =  (bot, message, args, utils) => {
   
   const member = message.mentions.members.first() || message.guild.member(args[0]) || message.member;
   
-   const avatar = await fetch(member.user.displayAvatarURL ({format: 'jpg'}))
+   const avatar =  fetch(member.user.displayAvatarURL ({format: 'jpg'}))
     
     
 let mage = new Canvas(500, 250)
@@ -24,7 +24,7 @@ let mage = new Canvas(500, 250)
 .addText(`GUILD NAME - ${message.guild.name}`, 30, 200)
 .setColor("#ffffff")
 .addCircle(60, 40, 33)
-.addCircularImage(await avatar.buffer(), 60, 40, 30)
+.addCircularImage(avatar.buffer(), 60, 40, 30)
 .toBuffer();
     
     message.channel.send({files: [mage]}) //lol i forget again
