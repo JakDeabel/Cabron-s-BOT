@@ -4,6 +4,8 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
     if(!message.content.startsWith('c'))return;  
+  
+  const member = message.mentions.members.first() || message.guild.member(args[0]) || message.member;
 
     let user = message.author;
     let moneydb = await db.fetch(`money_${message.guild.id}_${user.id}`)
@@ -27,20 +29,22 @@ module.exports.run = async (bot, message, args) => {
     if (number[0] == number[1] && number[1] == number[2]) { 
         money *= 9
         win = true;
-    } else if (number[0] == number[1] || number[0] == number[1] || number[1] == number[2]) { 
+    } else if (number[0] == number[2] || number[0] == number[2] || number[1] == number[2]) { 
         money *= 2
         win = true;
     }
     if (win) {
         let slotsEmbed1 = new Discord.RichEmbed()
-            .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n\nGanhaste **${money}** <:image:735338033183981628> Rubies`)
+            .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n{nGanhaste **${money}** <:image:735338033183981628> Rubies`)
             .setColor("#4a2496")
+            .setThumbnail(`${member.user.displayAvatarURL}`)
         message.channel.send(slotsEmbed1)
         db.add(`money_${message.guild.id}_${user.id}`, money)
     } else {
         let slotsEmbed = new Discord.RichEmbed()
             .setDescription(`${slotItems[number[0]]} | ${slotItems[number[1]]} | ${slotItems[number[2]]}\n\nPerdeste ** ${money}** <:image:735338033183981628> Rubies`)
             .setColor("#4a2496")
+            .setThumbnail(`${member.user.displayAvatarURL}`)
         message.channel.send(slotsEmbed)
         db.subtract(`money_${message.guild.id}_${user.id}`, money)
     }
