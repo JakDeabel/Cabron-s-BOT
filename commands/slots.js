@@ -1,6 +1,7 @@
 const slotItems = [":watermelon:", ":pear:", ":tangerine:", ":green_apple:", ":apple:", ":cherries: ", ":pineapple:"];
 const db = require("quick.db");
 const Discord = require('discord.js');
+const ms = require("parse-ms");
 
 module.exports.run = async (bot, message, args) => {
     if(!message.content.startsWith('c'))return;  
@@ -11,6 +12,10 @@ module.exports.run = async (bot, message, args) => {
     let moneydb = await db.fetch(`money_${message.guild.id}_${user.id}`)
     let money = parseInt(args[0]);
     let win = false;
+  
+  let author = await db.fetch(`money_${message.guild.id}_${user.id}`)
+  
+  let timeout = 6000;
 
     let moneymore = new Discord.RichEmbed()
     .setColor("#4a2496")
@@ -33,6 +38,16 @@ module.exports.run = async (bot, message, args) => {
         money *= 2
         win = true;
     }
+  
+  if (author !== null && timeout - (Date.now() - author) > 0) {
+        let time = ms(timeout - (Date.now() - author));
+    
+        let timeEmbed = new Discord.RichEmbed()
+        .setColor("#4a2496")
+        .setDescription(`<a:702223671066099812:711253483067801631> Podes voltar a apostar em ${time.minutes}m ${time.seconds}s `);
+        message.channel.send(timeEmbed)
+      } else {
+        
     if (win) {
         let slotsEmbed1 = new Discord.RichEmbed()
             .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n{nGanhaste **${money}** <:image:735338033183981628> Rubies`)
@@ -50,6 +65,8 @@ module.exports.run = async (bot, message, args) => {
     }
 
 }
+  }
+  
   
   module.exports.help = {
     name:"slots",
