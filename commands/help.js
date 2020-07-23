@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
 
         .setAuthor(`${message.author.username}`, message.author.avatarURL)
         .setTitle("Comandos de Utilidade 🗒")
-        .setDescription("``ajuda``, ``reload``, ``botinfo``, ``poll``, ``apagar``, ``uptime``, ``coronapt``, ``coronabr``, ``parceria``, ``ping``, ``say``, ``sugestao``")
+        .setDescription("``ajuda``, ``reload``, ``botinfo``, ``poll``, ``reportarbug``, ``apagar``, ``uptime``, ``coronapt``, ``coronabr``, ``parceria``, ``ping``, ``say``, ``sugestao``")
         .setColor("#4a2496")
         .setFooter(`${bot.user.username} | Prefixo: c!`, bot.user.avatarURL)
 		.setTimestamp();
