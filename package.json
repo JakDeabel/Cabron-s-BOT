@@ -20,7 +20,10 @@
     "jimp": "^0.14.0",
     "color-diff": "^1.2.0",
     "twemoji": "^13.0.1",
-    "discord.js-minesweeper": "^1.0.5"
+    "discord.js-minesweeper": "^1.0.5",
+    "canvas-constructor": "^3.2.0",
+    "canvas": "^2.6.1",
+    "node-fetch": "^2.6.0"
   },
   "engines": {
     "node": "12.x"
