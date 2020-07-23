@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
     let money = parseInt(args[0]);
     let win = false;
   
-  let author = await db.fetch(`work_{message.guild.id}_${user.id}`)
+  let author = await db.fetch(`slots_{message.guild.id}_${user.id}`)
   
   let timeout = 30000;
 
@@ -39,13 +39,17 @@ module.exports.run = async (bot, message, args) => {
         win = true;
     }
   
-  if (moneydb !== null && timeout - (Date.now() - moneydb) > 0) {
-        let time = ms(timeout - (Date.now() - moneydb));
-    
-        let timeEmbed = new Discord.RichEmbed()
-        .setColor("#4a2496")
-        .setDescription(`<a:702223671066099812:711253483067801631> Podes voltar a apostar em ${time.minutes}m ${time.seconds}s `);
-        message.channel.send(timeEmbed)
+  let daily = await db.fetch(`slots_${message.guild.id}_${user.id}`);
+
+  if (daily !== null && timeout - (Date.now() - daily) > 0) {
+    let time = ms(timeout - (Date.now() - daily));
+  
+ let timeEmbed = new Discord.RichEmbed()
+    .setColor("#4a2496")
+    .setDescription(`<a:702223671066099812:711253483067801631> ${time.hours}h ${time.minutes}m ${time.seconds}s `);
+    message.channel.send(timeEmbed)
+  } else {
+  
         
     if (win) {
         let slotsEmbed1 = new Discord.RichEmbed()
@@ -54,6 +58,7 @@ module.exports.run = async (bot, message, args) => {
             .setThumbnail(`${member.user.displayAvatarURL}`)
         message.channel.send(slotsEmbed1)
         db.add(`money_${message.guild.id}_${user.id}`, money)
+      db.set(`slots_${message.guild.id}_${user.id}`, Date.now())
     } else {
         let slotsEmbed = new Discord.RichEmbed()
             .setDescription(`${slotItems[number[0]]} | ${slotItems[number[1]]} | ${slotItems[number[2]]}\n\nPerdeste ** ${money}** <:image:735338033183981628> Rubies`)
@@ -61,11 +66,12 @@ module.exports.run = async (bot, message, args) => {
             .setThumbnail(`${member.user.displayAvatarURL}`)
         message.channel.send(slotsEmbed)
         db.subtract(`money_${message.guild.id}_${user.id}`, money)
+        db.set(`slots_${message.guild.id}_${user.id}`, Date.now())
     }
 
 }
-  }
   
+  }
   
   module.exports.help = {
     name:"slots",
