@@ -30,16 +30,16 @@ module.exports.run = async (bot, message, args) => {
   let icon = bot.user.displayAvatarURL;
   let embed = new Discord.RichEmbed()
 
-    .setTitle(`Olá sou o ${bot.user.username} e aqui estão as minhas informações!`)
+    .setTitle(`<:logosquare4:735708167379353630> Aqui estão as minhas informações!`)
     .setColor("#4a2496")
     .setThumbnail(icon)
-    .addField('Meu nome:', bot.user.username, true)
-    .addField('Servidores:', bot.guilds.size, true)
-    .addField('Versão Discord.js:', `v${version}`, true)
-    .addField('Versão Node:', `${process.version}`, true)
-    .addField('Memoria sendo usada:', `${(((process.memoryUsage().heapUsed)/1024)/1024).toFixed(0)}MBs of RAM`, true)
-    .addField('Usuários:', bot.users.size, true)
-    .addField('Uptime', `${time(bot.uptime)}`);
+    .addField(':bust_in_silhouette: **Meu nome**:', bot.user.username, true)
+    .addField('<:logosquare3:735706398104485988> **Servidores**:', bot.guilds.size, true)
+    .addField('<:logosquare1:735705050910818354> **Versão Discord.js**:', `v${version}`, true)
+    .addField('<:images1:735704010266247189> **Versão Node**:', `${process.version}`, true)
+    .addField('<:logosquare2:735705590114025472> **Memoria sendo usada**:', `${(((process.memoryUsage().heapUsed)/1024)/1024).toFixed(0)}MBs of RAM`, true)
+    .addField(':busts_in_silhouette: **Usuários**:', bot.users.size, true)
+    .addField('<:6951_Online:735336429286064189> **Uptime**:', `${time(bot.uptime)}`);
 
   return message.channel.send(embed);
 };

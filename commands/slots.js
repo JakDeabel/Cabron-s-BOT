@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
     if (number[0] == number[1] && number[1] == number[2]) { 
         money *= 9
         win = true;
-    } else if (number[0] == number[2] || number[0] == number[2] || number[1] == number[2]) { 
+    } else if (number[0] == number[1] || number[0] == number[2] || number[1] == number[2]) { 
         money *= 2
         win = true;
     }
