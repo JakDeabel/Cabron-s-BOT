@@ -11,7 +11,7 @@ let embed = new Discord.RichEmbed()
 .addField("Reportado por", user)
 .setColor("#4a2496")
 
-message.channel.send("**<a:711037344798474260:711251952536780802>| Bug reportado com sucesso, será analisado e corrigido o mais rapidamente possivel.**")
+message.channel.send("<a:711037344798474260:711251952536780802>| Bug reportado com **sucesso**, será analisado e corrigido o mais rapidamente possivel.")
 channel.send(embed).then(i => i.react("⏳"))
 
   
