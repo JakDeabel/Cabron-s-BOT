@@ -9,7 +9,8 @@ if (!args) return message.reply("Qual é a pergunta, mortal?")
         message.reply("Vamos perguntar aos Deuses do Olimpo, e deixá-los decidir.")
         message.channel.send("<:emoji_45:733604554809278515>")
         let vote = ""
-        let acc = 0
+        let acc = 0;
+  
         for (i=1; i<=4; ++i) {
             let r = Math.random()
             if (r >=0.5) {
