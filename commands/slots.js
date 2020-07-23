@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const ms = require("parse-ms");
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.content.startsWith('c'))return;  
+    if(!message.content.startsWith('c!'))return;  
   
   const member = message.mentions.members.first() || message.guild.member(args[0]) || message.member;
 
@@ -13,9 +13,9 @@ module.exports.run = async (bot, message, args) => {
     let money = parseInt(args[0]);
     let win = false;
   
-  let author = await db.fetch(`money_${message.guild.id}_${user.id}`)
+  let author = await db.fetch(`work_{message.guild.id}_${user.id}`)
   
-  let timeout = 6000;
+  let timeout = 30000;
 
     let moneymore = new Discord.RichEmbed()
     .setColor("#4a2496")
@@ -39,18 +39,17 @@ module.exports.run = async (bot, message, args) => {
         win = true;
     }
   
-  if (author !== null && timeout - (Date.now() - author) > 0) {
-        let time = ms(timeout - (Date.now() - author));
+  if (moneydb !== null && timeout - (Date.now() - moneydb) > 0) {
+        let time = ms(timeout - (Date.now() - moneydb));
     
         let timeEmbed = new Discord.RichEmbed()
         .setColor("#4a2496")
         .setDescription(`<a:702223671066099812:711253483067801631> Podes voltar a apostar em ${time.minutes}m ${time.seconds}s `);
         message.channel.send(timeEmbed)
-      } else {
         
     if (win) {
         let slotsEmbed1 = new Discord.RichEmbed()
-            .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n{nGanhaste **${money}** <:image:735338033183981628> Rubies`)
+            .setDescription(`${slotItems[number[2]]} | ${slotItems[number[1]]} | ${slotItems[number[0]]}\n\nGanhaste **${money}** <:image:735338033183981628> Rubies`)
             .setColor("#4a2496")
             .setThumbnail(`${member.user.displayAvatarURL}`)
         message.channel.send(slotsEmbed1)
