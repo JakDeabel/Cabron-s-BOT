@@ -16,6 +16,17 @@ module.exports.run = async (bot, message, args) => {
   let author = await db.fetch(`slots_{message.guild.id}_${user.id}`)
   
   let timeout = 30000;
+  
+  let daily = await db.fetch(`slots_${message.guild.id}_${user.id}`);
+
+  if (daily !== null && timeout - (Date.now() - daily) > 0) {
+    let time = ms(timeout - (Date.now() - daily));
+  
+ let timeEmbed = new Discord.RichEmbed()
+    .setColor("#4a2496")
+    .setDescription(`<a:702223671066099812:711253483067801631> ${time.hours}h ${time.minutes}m ${time.seconds}s `);
+    message.channel.send(timeEmbed)
+  } else {
 
     let moneymore = new Discord.RichEmbed()
     .setColor("#4a2496")
@@ -39,16 +50,7 @@ module.exports.run = async (bot, message, args) => {
         win = true;
     }
   
-  let daily = await db.fetch(`slots_${message.guild.id}_${user.id}`);
 
-  if (daily !== null && timeout - (Date.now() - daily) > 0) {
-    let time = ms(timeout - (Date.now() - daily));
-  
- let timeEmbed = new Discord.RichEmbed()
-    .setColor("#4a2496")
-    .setDescription(`<a:702223671066099812:711253483067801631> ${time.hours}h ${time.minutes}m ${time.seconds}s `);
-    message.channel.send(timeEmbed)
-  } else {
   
         
     if (win) {
@@ -70,8 +72,12 @@ module.exports.run = async (bot, message, args) => {
     }
 
 }
+
+  
   
   }
+
+  
   
   module.exports.help = {
     name:"slots",
