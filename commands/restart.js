@@ -10,7 +10,7 @@ const owner = "318149637964038144";
         message.channel.send(`A fechar pastas...`)
         setTimeout(() => {
             process.exit(0);
-        }, 5000); message.channel.send('Estou pronto!')
+        }, 5000); 
     } else {
         return message.channel.send("<a:702223671066099812:711253483067801631>| Você não tem permissão para reiniciar o bot.");
         }
