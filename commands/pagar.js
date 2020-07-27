@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     
   } else {
     
-    if(isNaN(args[0])) return message.reply("Indica uma quantidade que queres pagar.");
+    if(isNaN(args[1])) return message.reply("Indica uma quantidade que queres pagar.");
       
   } 
     
@@ -48,9 +48,10 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#4a2496")
   .setDescription(`<a:6181_check:734253564746137620>| Você pagou ao ${user.user.username} **${args[1]}** <:image:735338033183981628> Rubies`);
 
-  message.channel.send(embed5)
+  message.channel.send(embed5) 
+
   db.add(`money_${message.guild.id}_${user.id}`, args[1])
-  db.subtract(`money_${message.guild.id}_${message.author.id}`, args[1])
+  db.subtract(`money_${message.guild.id}_${message.author.id}`, args[1]) 
 
 }
 
