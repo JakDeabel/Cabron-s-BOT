@@ -23,7 +23,7 @@ bot.on('guildMemberAdd', member => {
     .setThumbnail(member.user.displayAvatarURL)
     .setFooter(" Cabrons Community - Direitos Reservados°")
      
-  let wec = bot.channels.get('733384176270704690')
+  let wec = bot.channels.get('737376806377750540')
     
     wec.send(`<@${member.id}>`).then(message => setTimeout(() => message.delete(), 300000))
     wec.send(embed).then(message => setTimeout(() => message.delete(), 300000))
