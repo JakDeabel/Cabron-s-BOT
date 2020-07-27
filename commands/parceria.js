@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 exports.run = (bot, message, args) => {
   
-   if(!message.member.roles.has('709515494633504798') && !message.member.roles.has('709515494633504798')) {    
+  if(!message.member.roles.has('709515494633504798') && !message.member.roles.has('709515494633504798')) {    
 }
   
   const canal = bot.channels.get("709968517981798504");

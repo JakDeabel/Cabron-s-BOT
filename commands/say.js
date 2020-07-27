@@ -2,13 +2,17 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   
-  if(!message.member.roles.has('709515494633504798') && !message.member.roles.has('709515494633504798')) {    
-}
+  const owner = "340622268424126465";
+   if (message.author.id === owner) {
   
       const sayMessage = args.join(" ");
       message.delete().catch();
       message.channel.send(sayMessage);
-}
+     
+} else {
+        return message.channel.send("<a:702223671066099812:711253483067801631>| Você não tem permissão para utilizar esse comando.");
+        }
+  }
 
 module.exports.help = {
     name:"say",
