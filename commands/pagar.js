@@ -15,7 +15,13 @@ module.exports.run = async (bot, message, args) => {
 
   if (!user) {
       return message.channel.send(embed1)
-  }
+    
+  } else {
+    
+    if(isNaN(args[0])) return message.reply("Indica uma quantidade que queres pagar.");
+      
+  } 
+    
   let embed2 = new Discord.RichEmbed()
   .setColor("#4a2496")
   .setDescription(`<a:702223671066099812:711253483067801631>| Indica uma quantidade que queres pagar.`);
