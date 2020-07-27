@@ -3,8 +3,8 @@ const bot = new Discord.Client();
 
 exports.run = (bot, message, args) => {
   
-  if(!message.member.roles.has('709515494633504798') && !message.member.roles.has('709515494633504798')) {    
-}
+  const owner = "340622268424126465";
+   if (message.author.id === owner) {
   
   const canal = bot.channels.get("709968517981798504");
 
@@ -17,7 +17,9 @@ exports.run = (bot, message, args) => {
 
   canal.send(embed);
 
-
+} else {
+        return message.channel.send("<a:702223671066099812:711253483067801631>| Você não tem permissão para utilizar esse comando.");
+        }
      
 }
           
